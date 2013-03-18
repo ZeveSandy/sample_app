@@ -5,7 +5,7 @@
 #  id           :integer          not null, primary key
 #  name         :string(255)
 #  email        :string(255)
-#  school       :string(255)
+#  college       :string(255)
 #  address      :string(255)
 #  phone_number :string(255)
 #  created_at   :datetime         not null
@@ -16,7 +16,7 @@ require 'spec_helper'
 
 describe User do
   before do 
-  	@user = User.new(:name => "Example User", :email => "user@example.com", :school => "Example University", :address => "123 Example Street, Example, Example 10001", :phone_number => "2134823699", :password => "foobar", :password_confirmation => "foobar")
+  	@user = User.new(:name => "Example User", :email => "user@example.com", :school => "Example", :address => "123 Example Street, Example, Example 10001", :phone_number => "2134823699", :password => "foobar", :password_confirmation => "foobar")
 end
 
 

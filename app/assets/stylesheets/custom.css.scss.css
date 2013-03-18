@@ -3,6 +3,7 @@
 /* mixins, variables, etc. */
 
 $grayMediumLight: #eaeaea;
+$blue: #3bbfce;
 
 /* universal */
 
@@ -18,6 +19,12 @@ html {
 
 body {
   padding-top: 60px;
+  background: $blue;
+  background-image: url(/assets/Flag.jpg);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+
 }
 
 section {
@@ -65,18 +72,21 @@ p {
 
 /* header */
 
+header {
+  color: white;
+}
+
 #logo {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
   color: white;
-  text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
   &:hover {
-    color: white;
+    color: Darkorange;
     text-decoration: none;
   }
 }
@@ -202,7 +212,7 @@ input {
   display: block;
 }
 .timestamp {
-  color: $grayLight;
+  color: $blue;
 }
 .gravatar {
   float: left;

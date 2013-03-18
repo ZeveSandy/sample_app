@@ -92,7 +92,7 @@ describe "UserPages" do
         fill_in "Email",        with: "user@example.com"
         fill_in "Password",     with: "foobar"
         fill_in "Confirmation", with: "foobar"
-    	fill_in "school",		with: "Example University"
+    	fill_in "school",		with: "Example"
     	fill_in "address",		with: "123 Example Street, Example, Example 10001"
     	fill_in "phone_number",	with: "2134823699"
       end
