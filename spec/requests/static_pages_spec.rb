@@ -5,7 +5,6 @@ describe "Static pages" do
   subject { page }
 
   shared_examples_for "all static pages" do
-    it { should have_selector('h1',    text: heading) }
     it { should have_selector('title', text: full_title(page_title)) }
   end
 
@@ -51,6 +50,15 @@ describe "Static pages" do
 
     it_should_behave_like "all static pages"
   end
+
+  describe "Resources page" do
+    before { visit resources_path }
+
+    let(:heading)    { 'Resources' }
+    let(:page_title) { '' }
+
+    it_should_behave_like "all static pages"
+  end
   it "should have the right links on the layout" do
     visit root_path
     click_link "About"
@@ -59,6 +67,8 @@ describe "Static pages" do
     page.should have_selector 'title', text: full_title('Help')
     click_link "Contact"
     page.should have_selector 'title', text: full_title('Contact')
+    click_link "Resources"
+    page.should have_selector 'title', text: full_title('Resources')
     click_link "Home"
     click_link "Sign up now!"
     page.should have_selector 'title', text: full_title('Sign Up')
