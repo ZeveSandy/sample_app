@@ -76,12 +76,19 @@ p {
 
 /* header */
 
+.navbar {
+  color: blue;
+}
+
 header {
-  color: white;
+  color: black;
 }
 
 #logo {
   float: left;
+  background: url(/assets/VFA.jpg) no-repeat;
+  height: 70;
+  width: 206;
   margin-right: 10px;
   font-size: 1.7em;
   color: white;
@@ -89,10 +96,10 @@ header {
   padding-top: 9px;
   font-weight: bold;
   line-height: 1;
-  &:hover {
+  /*&:hover {
     color: Darkorange;
     text-decoration: none;
-  }
+  } */
 }
 
 /* footer */

@@ -16,6 +16,7 @@ SampleApp::Application.routes.draw do
   match '/about', :to => 'static_pages#about'
   match '/contact', :to =>'static_pages#contact'
   match '/resources', :to =>'static_pages#resources'
+  match '/faq', :to => 'static_pages#faq'
 
 
   # The priority is based upon order of creation:

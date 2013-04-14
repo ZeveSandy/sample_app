@@ -59,10 +59,22 @@ describe "Static pages" do
 
     it_should_behave_like "all static pages"
   end
+
+  describe "FAQs page" do
+    before { visit faq_path }
+
+    let(:heading)    { 'FAQs' }
+    let(:page_title) { '' }
+
+    it_should_behave_like "all static pages"
+  end
+
   it "should have the right links on the layout" do
     visit root_path
     click_link "About"
     page.should have_selector 'title', text: full_title('About')
+    click_link "FAQs"
+    page.should have_selector 'title', text: full_title('FAQs')
     click_link "Help"
     page.should have_selector 'title', text: full_title('Help')
     click_link "Contact"
