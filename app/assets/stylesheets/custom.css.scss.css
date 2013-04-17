@@ -31,6 +31,7 @@ body {
 
 }
 
+
 section {
   overflow: auto;
 }
@@ -71,6 +72,26 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  li {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+}
+
+li {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+ul{
+.a {
+  list-style-type:circle;
+
+  li {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+}
 }
 
 
@@ -86,7 +107,7 @@ header {
 
 #logo {
   float: left;
-  background: url(/assets/VFA.jpg) no-repeat;
+  /*background: url(/assets/VFA.jpg) no-repeat;*/
   height: 70;
   width: 206;
   margin-right: 10px;

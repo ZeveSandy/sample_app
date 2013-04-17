@@ -1,0 +1,42 @@
+<div class=" hero-unit">
+<div class="right controls"><%= link_to "Back to Forum List", forums_path %></div>
+<div class="module">
+  <div class="module_header">
+    <h1>
+    <%= @forum.title %>
+  </h1>
+    <span class="controls right">
+      <center>
+      <%= link_to "New Topic", new_forum_topic_path(@forum) %>
+      <%= link_to "Edit Forum", edit_forum_path(@forum) %>
+      <%= link_to "Delete Forum", forum_path(@forum), :confirm => "Are you sure you want to delete this forum?", :method => :delete %>
+    </center>
+    </span>
+  </div>
+  <div>
+    <table>
+      <tr class="smaller">
+        <th colspan="2" align="left">Topic</th>
+        <th>Replies</th>
+        <th>Views</th>
+        <th class="last_post" align="left">Last Post</th>
+      </tr>
+      <% @forum.topics.each do |topic| %>
+      <tr>
+        <td class="icon"><%= gravatar_for(topic.user) %></td>
+        <td class="description">
+          <%= link_to topic.title, topic_path(topic) %><br />
+          <span class="smaller"><center>by <%= topic.user.name %></center></span>
+        </td>
+        <td class="counts smaller"><center><%= topic.posts.size - 1 %></center></td>
+        <td class="counts smaller"><center><%= topic.hits %></center></td>
+        <td class="last_post smaller">
+          <%= topic.posts.last.created_at %><br />
+          by <%= topic.posts.last.user.name %>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+</div>
