@@ -13,9 +13,23 @@ $blue: #3bbfce;
   box-sizing: border-box;
 } 
 
-@heroUnitBackground {
-  @Coral
+
+.hero-unit{
+  background:white;
+ color:black;
+
 }
+
+.home-page
+{
+  margin: 0;
+  padding: 0;
+  /*background-image: url(/assets/duke.jpg);*/
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
 
 html {
   overflow-y: scroll;
@@ -23,11 +37,18 @@ html {
 
 body {
   padding-top: 60px;
-  background: $blue;
-  background-image: url(/assets/Flag.jpg);
-  background-repeat:no-repeat;
+  background: $white;
+  color: black;
+ background-image: url(/assets/blue.jpg);
+  /*background-repeat:no-repeat;*/
   background-attachment:fixed;
   background-position:center;
+   home-body{
+     background-image: url(/assets/duke.jpg);
+     z-index: 3;
+  width: 100%;
+   }
+
 
 }
 
@@ -38,6 +59,8 @@ section {
 
 textarea {
   resize: vertical;
+  height: 100px;
+
 }
 
 .center {
@@ -53,17 +76,43 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
+h7, h8, h9 {
+  line-height: 70%;
+}
+
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
 }
+h9 {
+  font-size: 4em;
+  letter-spacing: 1px;
+  margin-bottom: 0px;
+  text-align: center;
+  font-weight: 600;
+}
+h7 {
+  font-size: 10.5em;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+  text-align: center;
+  color: #E11414;
+  font-weight: 900;
+}
+h8 {
+  font-size: 3.6em;
+  letter-spacing: 0px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+}
 
 h2 {
   font-size: 1.7em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   text-align: center;
   font-weight: normal;
   color: $grayLight;
@@ -72,6 +121,7 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  font-color:black;
   li {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -97,12 +147,12 @@ ul{
 
 /* header */
 
-.navbar {
-  color: blue;
+.navbar-inner {
+  
 }
 
 header {
-  color: black;
+  color: white;
 }
 
 #logo {
