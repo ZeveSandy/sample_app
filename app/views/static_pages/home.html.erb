@@ -10,24 +10,31 @@
     </aside>
     <div class="span8">
       <div class=" hero-unit">
-      <h2>Tell Us What You've Been Doing</h2>
+      <h2>What You've Been Doing</h2>
       <%= render 'shared/feed' %>
     </div>
     </div>
   </div> 
 <% else %>
-  <div class="home-body">
-    <div class="hero-unit">
+  <div class="hero-wrapper hero">
+    <div id="loading">Loading...</div>
+    <div class="filter">
+      <div class="container">
+        <center>
 
-      <center>
-
-  <h7>WELCOME</h7> <p><h9><a href="http://ventureforamerica.org/">Venture for America</a></h9> <h8>Campus Ambassadors!</h8></p>
+      
+       <h7>WELCOME</h7> <p><h9><a href="http://ventureforamerica.org/">Venture for America</a></h9></p><p> <h8>Campus Ambassadors!</h8></p>
+     </center>
 
   <h2>
     The place for VFA's Campus Ambassadors to connect and collaborate.</a>
   </h2>
+    </div>
+  </div>
 
-  <!-- <%= link_to "Sign up!", signup_path, :class => "btn btn-large btn-primary" %> 
+ 
+
+   <!--<%= link_to "Sign up!", signup_path, :class => "btn btn-large btn-primary" %> -->
 
 
 </div>
