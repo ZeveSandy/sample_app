@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: forums
+#
+#  id           :integer          not null, primary key
+#  title        :string(255)
+#  description  :text
+#  state        :boolean          default(TRUE)
+#  topics_count :integer          default(0)
+#  posts_count  :integer          default(0)
+#  position     :integer          default(0)
+#  category_id  :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#  user_id      :integer
+#
+
 class Forum < ActiveRecord::Base
   
   # Associations
@@ -5,10 +22,10 @@ class Forum < ActiveRecord::Base
   has_many :posts, :through => :topics
   
   belongs_to :category
-   belongs_to :user, :class_name => "User", :counter_cache => true
+  belongs_to :user, :class_name => "User", :counter_cache => true
   
   # Accessors
-  attr_accessible :title, :description, :state, :position, :category_id
+  attr_accessible :title, :description, :state, :position, :category_id, :user_id
   
   # Scopes
   default_scope :order => 'position ASC'

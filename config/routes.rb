@@ -17,7 +17,7 @@ SampleApp::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-  root :to => 'static_pages#home'
+  root :to => 'sessions#new'
 
   
   match '/signup', :to => 'users#new'
@@ -27,6 +27,16 @@ SampleApp::Application.routes.draw do
   match '/contact', :to =>'static_pages#contact'
   match '/resources', :to =>'static_pages#resources'
   match '/faq', :to => 'static_pages#faq'
+  match '/welcome', :to => 'static_pages#welcome'
+  match '/materials', :to => 'static_pages#materials'
+  match '/responsibilities', :to => 'static_pages#responsibilities'
+  match '/careerfair', :to => 'static_pages#career'
+  match '/classtalk', :to => 'static_pages#class'
+  match '/article', :to => 'static_pages#paper'
+  match '/tabling', :to => 'static_pages#tabling'
+  match '/flyers', :to => 'static_pages#flyers'
+  match '/emailtemplates', :to => 'static_pages#email'
+
 
 
   # The priority is based upon order of creation:

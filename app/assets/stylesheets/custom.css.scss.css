@@ -4,6 +4,8 @@
 
 $grayMediumLight: #eaeaea;
 $blue: #3bbfce;
+$grapefruit: #ed4b32; 
+$VFAblue: #0a76ce; 
 
 /* universal */
 
@@ -13,6 +15,16 @@ $blue: #3bbfce;
   box-sizing: border-box;
 } 
 
+
+.comment{
+
+  border-bottom: 1px solid $red;
+
+}
+
+div.navbar div.navbar-inner div.navs ul.nav li:hover {
+    color: black ; 
+}
 
 .hero-unit{
   background:white;
@@ -39,7 +51,7 @@ body {
   padding-top: 60px;
   background: $white;
   color: black;
- background-image: url(/assets/blue.jpg);
+ /*background-image: url(/assets/blue.jpg);*/
   /*background-repeat:no-repeat;*/
   background-attachment:fixed;
   background-position:center;
@@ -63,11 +75,47 @@ textarea {
 
 }
 
+.block{
+  p {color: white;}
+font-size: 2.5em;
+  background-color: $grapefruit;
+  h1 {
+    color:white;
+    font-size: 2em;
+    margin-bottom: 0px;
+  }
+  h4 {
+    color:white;
+    font-size: .5em;
+  }
+}
+
+.block1{
+  p {color: white;}
+  margin-bottom: 20px;
+  margin-top: 20px;
+font-size: 2.5em;
+  background-color: $grapefruit;
+  h1 {
+    color:white;
+    font-size: 2em;
+    margin-bottom: 0px;
+  }
+  h4 {
+    color:white;
+    font-size: .5em;
+  }
+}
+
 .center {
   text-align: center;
   h1 {
     margin-bottom: 10px;
   }
+}
+
+.picture {
+  margin-top: 60px;
 }
 
 /* typography */
@@ -118,6 +166,23 @@ h2 {
   color: $grayLight;
 }
 
+h6 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: red;
+  text-align: center;
+}
+
+
+h5 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: normal;
+  color: red;
+}
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -144,22 +209,49 @@ ul{
 }
 }
 
-
-/* header */
-
-.navbar-inner {
-  
+.red-caret
+{
+border-top-color: red !important;
+border-bottom-color: red !important;
 }
 
-header {
-  color: white;
+
+/* header */
+.container {
+}
+
+.navbar-inner {
+    background-color: white; /* background color will be black for all browsers */
+  background-image: none;
+  background-repeat: no-repeat;
+  filter: none;
+  padding-top: 10px;
+}
+
+.small {
+  height: 60px;
+}
+
+.navbar .nav > li > a {
+  list-style: none;
+  color: $VFAblue;
+  caret {
+    color: black;
+  }
+  .active {
+    color: black;
+  }
+}
+
+.caret 
+{
+  color: blue;
 }
 
 #logo {
   float: left;
   /*background: url(/assets/VFA.jpg) no-repeat;*/
-  height: 70;
-  width: 206;
+height:50px;
   margin-right: 10px;
   font-size: 1.7em;
   color: white;
@@ -178,16 +270,16 @@ header {
 footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
+  border-top: 5px solid $red;
+  /*color: $grayLight;
   a {
     color: $gray;
     &:hover { 
       color: $grayDarker;
     }
-  }  
+  }*/  
   small { 
-    float: left; 
+    float: center; 
   }
   ul {
     float: right;

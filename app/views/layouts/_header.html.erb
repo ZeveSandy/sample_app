@@ -1,28 +1,30 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
+      <div class ="navs">
       <nav>
         
            <!--<li><%= link_to "About", about_path %></li>-->
           <% if signed_in? %>
-          <%= link_to "Profile", root_path, id: "logo" %>
-          <ul class="nav pull-right">
+          <a class="logo" href="/welcome"> <img src="/assets/logos.png"></a>
+          <ul class="nav nav-pills pull-right">
+            <li class="active">
             <li><%= link_to "Ambassador Directory", users_path %></li>
             <!--<li><%= link_to "Lauren's Page", user_path(User.first) %></li>-->
             <li><%= link_to "Discussion Board", forums_path %></li>
 
-            <li id="fat-menu" class="dropdown">
+            <!--<li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Resources <b class="caret"></b>
               </a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu">-->
                 <li><%= link_to "Contact Information", contact_path %></li> 
-                <li><%= link_to "CA Resources", resources_path %></li>
+                <!--<li><%= link_to "CA Resources", resources_path %></li>-->
                 <li><%= link_to "FAQs", faq_path %></li>
-              </ul>
+              <!--</ul>-->
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
+                Account <b class="caret red-caret"></b>
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Profile", current_user %></li>
@@ -34,6 +36,7 @@
               </ul>
             </li>
           <% else %>
+          <a class="logo" href="/signin"> <img src="/assets/logos.png"></a>
           <ul class="nav pull-right">
             <li><%= link_to "Sign in", signin_path %></li>
           </ul>
@@ -41,5 +44,6 @@
         </ul>
       </nav>
     </div>
+  </div>
   </div>
 </header>

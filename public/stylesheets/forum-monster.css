@@ -24,14 +24,16 @@
 .module .left { float:left; }
 .module .right { float:right; text-align:right; }
 .controls a { margin:0 5px; font-size:.8em; }
+tr {border-bottom: 50px;}
 
 /* Tables
 --------------------------------------------------------------------------------------------------*/
 table { width:100%; border-collapse:collapse; }
 table th { font-weight:normal; padding:.7em; font-size:.8em; border: 5px; }
-table td { padding:.5em; border:1px solid #e2e2e2; border-bottom:0px; vertical-align:top; background:#fff; }
+table td { padding:.5em; border:10px solid #e2e2e2; border-bottom:10px; vertical-align:top; background:#fff; }
 table td:first-child { border-left:5px; }
 table td:last-child { border-right:5px; }
+table .tr {padding-bottom: 10px;}
 
 table .icon { width:26px; text-align:center; }
 table .counts { width:8%; text-align:center; }
