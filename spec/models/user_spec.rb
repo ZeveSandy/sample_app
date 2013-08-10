@@ -2,14 +2,19 @@
 #
 # Table name: users
 #
-#  id           :integer          not null, primary key
-#  name         :string(255)
-#  email        :string(255)
-#  college       :string(255)
-#  address      :string(255)
-#  phone_number :string(255)
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
+#  id              :integer          not null, primary key
+#  name            :string(255)
+#  email           :string(255)
+#  school          :string(255)
+#  address         :string(255)
+#  phone_number    :string(255)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  password_digest :string(255)
+#  remember_token  :string(255)
+#  admin           :boolean          default(FALSE)
+#  topics_count    :integer          default(0)
+#  posts_count     :integer          default(0)
 #
 
 require 'spec_helper'
@@ -17,7 +22,7 @@ require 'spec_helper'
 describe User do
   before do 
   	@user = User.new(:name => "Example User", :email => "user@example.com", :school => "Example", :address => "123 Example Street, Example, Example 10001", :phone_number => "2134823699", :password => "foobar", :password_confirmation => "foobar")
-end
+  end
 
 
   subject {@user}
