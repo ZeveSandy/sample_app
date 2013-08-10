@@ -1,18 +1,11 @@
 <li>
   <%= gravatar_for user, size: 52 %>
-<<<<<<< HEAD
-  <ul><h3><%= link_to user.name, user %></h3></ul>
-  <ul>
-  <%= user.school %>
-</ul>
-<ul>
-  <%=user.email%>
-</ul>
-=======
+
   <h3><%= link_to user.name, user %></h3>
   <p><%= user.school %></p>
->>>>>>> c04536ae38a469be55ecb9d6687be352d786d6d1
+  <p style="padding-left:55px;"><%= user.email %></p>
+
   <% if current_user.admin? && !current_user?(user) %>
-    | <%= link_to "delete", user, method: :delete %>
+    <%= link_to "| delete", user_path(user), :method=> :delete, :style=>"float:right;" %>
   <% end %>
 </li>

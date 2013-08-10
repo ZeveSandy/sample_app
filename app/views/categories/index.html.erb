@@ -14,11 +14,12 @@
     </div>
     <% if category.forums.size > 0 %>
     <div>
-      <table>
+      <table class="discussion">
         <tr>
           <th colspan="2" align="left">Forum</th>
           <th colspan="2">Topics</th>
           <th colspan="2">Posts</th>
+          <th></th>
           <!--<th colspan="2" class="last_post" align="left">Last Post</th>-->
         </tr>
         <% category.forums.each do |forum| %>

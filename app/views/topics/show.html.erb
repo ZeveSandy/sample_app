@@ -7,13 +7,12 @@
       <center>
       <%= link_to "Edit", edit_topic_path(@topic) %>
       <%= link_to "Delete", @topic, :confirm => "Are you sure?", :method => :delete %>
-      <%= link_to @topic.sticky ? "Unstick" : "Sticky", {:controller => 'topics', :action => 'update', :topic => {:sticky => @topic.sticky ? "false" : "true" }}, :method => :put %>
       <%= link_to @topic.locked ? "Unlock" : "Lock", {:controller => 'topics', :action => 'update', :topic => {:locked => @topic.locked ? "false" : "true" }}, :method => :put %>
     </center>
     </span>
   </div>
   <div>
-    <table>
+    <table class="discussion">
       <% @topic.posts.each do |post| %>
       <tr>
         <td class="post_author" rowspan="2">
@@ -26,7 +25,7 @@
         <td class="post_header">
           <span class="name"><%= post.user.name %></span>
           <!--<span class="left post_date smaller">Posted <%= post.created_at %></span>-->
-          <span class="right controls">
+          <span class="right-controls">
             <%= link_to "Reply", new_topic_post_path(@topic) %>
             <!--<%= link_to "Quote", new_topic_post_path(@topic, :quote => post) %>-->
             <%= link_to "Edit", edit_post_path(post) %>
