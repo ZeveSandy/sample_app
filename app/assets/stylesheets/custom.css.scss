@@ -18,7 +18,7 @@ $VFAblue: #0a76ce;
 
 .comment{
 
-  border-bottom: 1px solid $red;
+  /*border-bottom: 1px solid $red;*/
 
 }
 
@@ -75,9 +75,9 @@ textarea {
 
 }
 
-.block{
+.block {
   p {color: white;}
-font-size: 2.5em;
+  font-size: 2.5em;
   background-color: $grapefruit;
   h1 {
     color:white;
